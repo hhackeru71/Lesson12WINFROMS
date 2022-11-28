@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -49,7 +50,7 @@ namespace Lesson12WINFROMS
                 users.Age = age;
 
                 db.Users.Add(users);
-                if(db.SaveChanges()>0)
+                if(db.SaveChanges()> 0)
                 {
                     MessageBox.Show("success!");
                     LoadData();
@@ -105,6 +106,30 @@ namespace Lesson12WINFROMS
                 MessageBox.Show("error delete! " + ex.ToString());
             }
            
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(users != null)
+                {
+                    users.FirstName = txtName.Text;
+                    users.LastName = txtFamily.Text;
+                    int.TryParse(txtAge.Text, out int age);
+                    users.Age =  age;
+                    db.Entry(users).State = EntityState.Modified;
+                    db.SaveChanges();
+                    MessageBox.Show("update success!");
+                    LoadData();
+
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error update!");
+               
+            }
         }
     }
 }
