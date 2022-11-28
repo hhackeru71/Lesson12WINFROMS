@@ -107,7 +107,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(404, 18);
+            this.label4.Location = new System.Drawing.Point(387, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 37);
             this.label4.TabIndex = 8;
@@ -175,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(804, 450);
+            this.ClientSize = new System.Drawing.Size(839, 450);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDlt);
             this.Controls.Add(this.label5);
